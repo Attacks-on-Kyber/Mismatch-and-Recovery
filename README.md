@@ -22,6 +22,18 @@ After making, then you can run
 
 >  ./PQCgenKAT_kem \<num\>
 
+
+
+To build the key recovery attack
+
+> make recovery
+
+After making, then you can run 
+
+> ./recovery
+
+
+
 `<num>` is a integer used as a random seed. For example, `./PQCgenKAT_kem 1`
 
 To run test, you need to install [rakudo](https://rakudo.org/) and run
