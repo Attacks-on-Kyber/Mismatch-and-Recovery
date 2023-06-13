@@ -411,21 +411,9 @@ void oracle_recovery(uint8_t r[256],
 
   poly_frommsg(&k, m);
 
-  // for (int p = 0; p<256;p++)
-  // printf("%d\n",k.coeffs[p]);
-
   poly_getnoise_eta2(&eB, coins, 0);
 
-  // for (int p = 0; p<256;p++)
-  // printf("%d\n",eB.coeffs[p]);
-
   unpack_sk(&sp, sk);
-
-        // for(int i = 0; i < KYBER_K; i++){
-        //     for(int j = 0; j < KYBER_N; j++){
-        //         printf("%d ", sp.vec[i].coeffs[j]);
-        //     }
-        // }
   memcpy(&PAntt, &PA, 2 * KYBER_N * KYBER_K);
   polyvec_ntt(&PAntt);
   polyvec_pointwise_acc_montgomery(&c, &PAntt, &sp);

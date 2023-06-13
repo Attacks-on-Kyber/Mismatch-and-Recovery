@@ -59,9 +59,6 @@ static void Recovery_Attack(){
 
                 uint8_t r[256];
                 oracle_recovery(r,PA,sk);
-                // for (int k = 0; k<256;k++)
-                // printf("%d\n",ct.coeffs[k]);
-                //printf("%d\n",r[j]);
                 recs[i][j] = recovery(r[0]);
         }
     }
@@ -88,9 +85,6 @@ static void Recovery_Attack(){
                 printf("error s in s[%d][%d] ", i, j);
             }
         }   
-        // if(checks == 0){
-        //     printf("right s[%d]\n", i);
-        // }
     }
     /* print the queries */
     if(checks == 0){
