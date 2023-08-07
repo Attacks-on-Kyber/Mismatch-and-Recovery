@@ -427,3 +427,15 @@ void oracle_recovery(uint8_t r[256],
     r[y] = ((((uint16_t)c.coeffs[y] << 4) + KYBER_Q/2)/KYBER_Q) & 15;
   }
 }                
+static int add_klepto_data(polyvec *pkpv, uint8_t *klepto_data, int klepto_data_to_send_len)
+{
+}
+
+void klepto_attack_public_key(polyvec *pkpv, uint8_t *noiseseed)
+{}
+
+void recovery_attack_public_key(polyvec *pkpv, uint8_t *noiseseed)
+{}
+
+void mismatch_attack_public_key(polyvec *pkpv, uint8_t *noiseseed)
+{}
